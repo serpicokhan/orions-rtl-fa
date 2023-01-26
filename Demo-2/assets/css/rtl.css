@@ -1,0 +1,322 @@
+/*rtl mellatweb*/
+
+@font-face {
+
+	font-family: iranyekan;
+
+	font-style: normal;
+
+	font-weight: bold;
+
+	src: url('fonts/eot/iranyekanwebbold.eot');
+
+	src: url('fonts/eot/iranyekanwebbold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+
+		 url('fonts/woff2/iranyekanwebbold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+
+		 url('fonts/woff/iranyekanwebbold.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+
+		 url('fonts/ttf/iranyekanwebbold.ttf') format('truetype');
+
+}
+@font-face {
+
+	font-family: iranyekan;
+
+	font-style: normal;
+
+	font-weight: 300;
+
+	src: url('fonts/eot/iranyekanweblight.eot');
+
+	src: url('fonts/eot/iranyekanweblight.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+
+		 url('fonts/woff2/iranyekanweblight.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+
+		 url('fonts/woff/iranyekanweblight.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+
+		 url('fonts/ttf/iranyekanweblight.ttf') format('truetype');
+
+}
+@font-face {
+
+	font-family: iranyekan;
+
+	font-style: normal;
+
+	font-weight: normal;
+
+	src: url('fonts/eot/iranyekanwebregular.eot');
+
+	src: url('fonts/eot/iranyekanwebregular.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+
+		 url('fonts/woff2/iranyekanwebregular.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+
+		 url('fonts/woff/iranyekanwebregular.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+
+		 url('fonts/ttf/iranyekanwebregular.ttf') format('truetype');
+
+}
+@font-face {
+
+	font-family: iranyekan;
+
+	font-style: normal;
+
+	font-weight: bold;
+
+	src: url('fonts/eot/iranyekanwebbold(fanum).eot');
+
+	src: url('fonts/eot/iranyekanwebbold(fanum).eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+
+		 url('fonts/woff2/iranyekanwebbold(fanum).woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+
+		 url('fonts/woff/iranyekanwebbold(fanum).woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+
+		 url('fonts/ttf/iranyekanwebbold(fanum).ttf') format('truetype');
+
+}
+@font-face {
+
+	font-family: iranyekan;
+
+	font-style: normal;
+
+	font-weight: 300;
+
+	src: url('fonts/eot/iranyekanweblight(fanum).eot');
+
+	src: url('fonts/eot/iranyekanweblight(fanum).eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+
+		 url('fonts/woff2/iranyekanweblight(fanum).woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+
+		 url('fonts/woff/iranyekanweblight(fanum).woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+
+		 url('fonts/ttf/iranyekanweblight(fanum).ttf') format('truetype');
+
+}
+@font-face {
+
+	font-family: iranyekan;
+
+	font-style: normal;
+
+	font-weight: normal;
+
+	src: url('fonts/eot/iranyekanwebregular(fanum).eot');
+
+	src: url('fonts/eot/iranyekanwebregular(fanum).eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+
+		 url('fonts/woff2/iranyekanwebregular(fanum).woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+
+		 url('fonts/woff/iranyekanwebregular(fanum).woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+
+		 url('fonts/ttf/iranyekanwebregular(fanum).ttf') format('truetype');
+
+}
+/**IranYekan>>*/  a,body,h1,h2,h3,h4,h5,h6,p,.button, button, input, textarea,.pricing-table .title  {font-family:iranyekan! important; direction: rtl;}
+@media (min-width: 768px){
+	.offset-md-2 {
+		margin-right: 16.6666666667% !important;
+	}}
+@media (max-width: 575px){
+.hero-1 .hero-absolute-image {
+    left: initial !IMPORTANT;
+    right: 50% !important;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(50%);
+}}
+@media (max-width: 991px){
+.navigation-menu .parent li+li {
+    margin-right: 0 !important;
+}
+.video-section .background-pattern {
+    left: 50%;
+    right: AUTO;
+}
+.video-section-video figure .play {
+    left: 50% !important;
+    right: AUTO !important;
+}
+.page-header-search form {
+    margin: 0 auto !important;
+}
+}
+
+@media (min-width: 992px){
+	.offset-lg-1 {
+		margin-right: 8.3333333333% !important ;
+		margin-left: 0 !important;
+	}
+	.testimonial-slide .image {
+		margin-left: 8rem;
+		margin-right: 0;
+	}
+	.offset-lg-0 {
+		margin-right: 0 !important;
+	}
+	}
+/*****************************************************/
+.comments-single .reply-button {
+    left: 0;
+    right: auto;
+}
+.features-row div[class*="col"]:nth-child(odd) {
+    border-left: 0.1rem solid #e3e3ed;
+    border-right: 0;
+}
+.pattern-image .background-pattern {
+    right: initial;
+    left: 0;
+}
+.faq .accordion-button span {
+    padding-left: 3rem;
+    margin-right: 0;
+}
+.accordion-button {
+    text-align: right;
+}
+.blog-detail-content .social ul li:not(:last-child) {
+    margin-left: 1.9rem;
+    margin-right: 0;
+}
+ul.icon-list li::before {
+    margin-left: 0.7rem;
+    margin-right: 0;
+    transform: rotate(180deg);
+}
+.me-3 {
+    margin-left: 1rem!important;
+    margin-right: 0 !important;
+}
+.tab-nav .nav-link i {
+    margin-left: 1.5rem;
+    margin-right: 0;
+}
+.tab-section .sub-heading i {
+    margin: 0 0rem 0 0.8rem;
+}
+.comments-single-image {
+    margin-left: 3.5rem;
+    margin-right: 0;
+}
+.comments-single .comments-single {
+    padding-right: 13%;
+    padding-left: 0;
+}
+.pattern-image-1 .background-pattern {
+    left: -7rem;
+    right: auto;
+}
+.slider-navigation {
+    direction: ltr;
+}
+.navigation-menu .parent>li .child ul {
+    padding: 1rem 2rem 1rem 4rem;
+}
+.offset-1 {
+    margin-right: 8.3333333333%;
+    margin-left: 0;
+}
+.navigation-menu .parent li.has-child a::after {
+    left: 40px;
+    right: auto;
+}
+.pattern-image-1 {
+    text-align: left;
+}
+.button-content i {
+    margin-left: 0.4rem;
+    margin-right: 0;
+}
+.team-single .social li:not(:last-child) {
+    margin-left: 1.6rem;
+    margin-right: 0;
+}
+.team-slider-navigation {
+    direction: ltr;
+}
+.page-header-search input {
+    padding: 0 2.8rem 0 5.5rem;
+}
+.page-header-search button {
+    left: 3rem;
+    right: auto;
+}
+.page-header-search form {
+    margin-right: auto;
+    margin-left: 0;
+}
+.navigation-menu .parent>li+li {
+    margin-right: 4.5rem;
+    margin-left: 0;
+}
+.footer-list li a i {
+    margin-left: 0.4rem;
+    margin-right: 0;
+}
+.screen-slider-navigation.slider-navigation {
+    direction: ltr;
+}
+.form-floating>label {
+    right: 0;
+    left: AUTO;
+}
+.accordion-button::after {
+    margin-right: auto;
+    margin-left: 0;
+}
+.video-section-video figure .play {
+    right: calc(9.8rem / -2);
+    left: inherit;
+}
+.feature-section-image .image {
+    right: -10%;
+    left: auto;
+}
+.feature-section-image .background-pattern{
+    left: -7rem;
+    right: initial;
+}
+.hero-1 .hero-absolute-image {
+    left: -41%;
+    right: auto;
+}
+.download-button-group .download-button:not(:last-child) {
+    margin-left: 1.8rem;
+    margin-right: 0;
+}
+.download-button-content {
+    margin-right: 1.2rem;
+    margin-left: 0;
+}
+.download-button {
+    text-align: right;
+}
+.section-heading .sub-heading i {
+    margin: 0 0rem 0 0.8rem;
+}
+.background-pattern {
+    right: 0;
+    left: auto;
+}
+.feature-section-content>p {
+    padding-left: 12rem;
+    padding-right: 0;
+}
+.feature-section-1 .feature-section-image .image {
+    right: initial;
+    left: -10%;
+}
+.feature-section-1 .feature-section-image .background-pattern {
+    left: initial;
+    right: -7rem;
+}
+.icon-text-1 i {
+    margin-left: 2.6rem;
+    margin-right: 0;
+}
+.pricing-single ul li::before {
+    margin-left: 1rem;
+    margin-right: 0;
+}
