@@ -11,7 +11,7 @@
     <!--
     title tag
     -->
-    <title>اوریون - صفحه لندینگ اپلیکیشن</title>
+    <title>ایکاد - سرویس اینترنتی چاپ</title>
 
     <!--
     favicon
@@ -36,7 +36,11 @@
 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
-    <link rel="stylesheet" href="assets/css/modal.css">
+    <style media="screen">
+      html{
+        scroll-behavior: smooth;
+      }
+    </style>
 </head>
 <body>
 
@@ -275,7 +279,7 @@
                                  راهی زیبا و موثر برای دریافت دانلودهای بیشتر
                                 پلتفرم‌های <b>اندرویید</b> و <b>iOS</b>.</p>
                                <div class="download-button-group">
-                                <a href="#" class="download-button download-button-2 download-button-google ">
+                                <a href="#scroll" class="download-button download-button-2 download-button-google ">
                                     <div class="download-button-inner">
                                         <div class="download-button-icon c-green">
                                             <i class="fab fa-google-play"></i>
@@ -297,21 +301,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <h2>Modal Example</h2>
 
-<!-- Trigger/Open The Modal -->
-<button id="myBtn">Open Modal</button>
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">×</span>
-    <p>Some text in the Modal..</p>
-  </div>
-
-</div>
                             </div>
                         </div>
                     </div>
@@ -1389,7 +1379,7 @@
     <!--
     contact form section - start
     -->
-    <div class="contact-form-section">
+    <div class="contact-form-section" id="scroll">
         <div class="contact-form-section-wrapper">
             <div class="container">
                 <div class="row gx-5 contact-form-section-row">
@@ -1408,19 +1398,43 @@
                                         <h1>ارسال پیام</h1>
                                     </div>
                                 </div>
-                                <form>
+                                <form method="post" action="upload_file.php">
                                     <div class="form-floating">
-                                        <input class="input form-control" id="name-field" type="text" placeholder="نام کامل">
-                                        <label for="name-field">نام کامل</label>
+                                        <!-- <input class="input form-control" id="name-field" type="text" placeholder="نام کامل"> -->
+                                        <select class="input form-control" name="size">
+                                          <option value="0">سایز A4</option>
+                                          <option value="1">سایز A5</option>
+                                          <option value="2">سایز A6</option>
+                                          <option value="3">سایز A3</option>
+                                        </select>
+                                        <label for="name-field">سایز</label>
                                     </div>
                                     <div class="form-floating">
-                                        <input class="input form-control" id="email-field" type="text" placeholder="آدرس ایمیل">
-                                        <label for="email-field">آدرس ایمیل</label>
+                                        <!-- <input class="input form-control" id="name-field" type="text" placeholder="نام کامل"> -->
+                                        <select class="input form-control" name="paper_type">
+                                          <option value="0">تک رو</option>
+                                          <option value="1">پشت رو</option>
+
+                                        </select>
+                                        <label for="name-field">نوع</label>
                                     </div>
                                     <div class="form-floating">
-                                        <input class="input form-control" id="message-field" type="text" placeholder="پیام">
+                                        <!-- <input class="input form-control" id="name-field" type="text" placeholder="نام کامل"> -->
+                                        <select class="input form-control" name="color_type">
+                                          <option value="0">سیاه و سفید</option>
+                                          <option value="0">رنگی</option>
+
+                                        </select>
+                                        <label for="name-field">نوع</label>
+                                    </div>
+
+                                    <div class="form-floating">
+                                        <input class="input form-control" id="message-field" name="message-field" type="text" placeholder="پیام">
                                         <label for="message-field">پیام</label>
                                     </div>
+                                    <!-- <div class="form-floating">
+                                        <input class="input form-control" id="message-field2" type="file" placeholder="پیام">
+                                    </div> -->
                                     <button type="submit" class="button button-2">
                                         <span class="button-inner">
                                             <span class="button-content">
@@ -1673,7 +1687,6 @@
     scripts
     -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/modal.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/glightbox.min.js"></script>
     <script src="assets/js/overlay-scrollbars.min.js"></script>
