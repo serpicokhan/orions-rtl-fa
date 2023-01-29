@@ -217,6 +217,7 @@ ul.icon-list li::before {
 .offset-1 {
     margin-right: 8.3333333333%;
     margin-left: 0;
+		margin-top:59px;
 }
 .navigation-menu .parent li.has-child a::after {
     left: 40px;
