@@ -29,9 +29,15 @@
 
 if(isset($_POST['size2']) && !empty($_POST['size2']) ){
 $size=$_POST['size2'];
+$paper_form=$_POST['paper_form'];
 $paper_type=$_POST['paper_type'];
 $color_type=$_POST['color_type'];
-$msg=(isset($_POST['message_field']) && !empty($_POST['message_field']))?$_POST['message_field']:'';
+$service_type=$_POST['service_type'];
+$seri=$_POST['seri'];
+$tamas=$_POST['tamas'];
+$nm=$_POST['nm'];
+$delivery_type=$_POST['delivery_type'];
+// $msg=(isset($_POST['message_field']) && !empty($_POST['message_field']))?$_POST['message_field']:'';
 // $repassword=$_POST['repassword'];
 }else
 exit("someFildes is EMPTY!");
@@ -55,6 +61,7 @@ if(isset($_FILES['myfile'])){
       $file_tmp = $_FILES['myfile']['tmp_name'];
       $file_type = $_FILES['myfile']['type'];
       $file_ext=strtolower(end(explode('.',$_FILES['myfile']['name'])));
+      echo echo basename($file_name) ."<br/>";
       move_uploaded_file($file_tmp,"images/".$file_name);
     }
 
