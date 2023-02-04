@@ -1,5 +1,46 @@
 
 <?php
+// use PHPMailer\PHPMailer\PHPMailer;
+// use PHPMailer\PHPMailer\SMTP;
+// use PHPMailer\PHPMailer\Exception;
+
+// require_once __DIR__ . '/vendor/phpmailer/src/Exception.php';
+// require_once __DIR__ . '/vendor/phpmailer/src/PHPMailer.php';
+// require_once __DIR__ . '/vendor/phpmailer/src/SMTP.php';
+
+// // passing true in constructor enables exceptions in PHPMailer
+// $mail = new PHPMailer(true);
+
+// try {
+    // // Server settings
+    // $mail->SMTPDebug = SMTP::DEBUG_SERVER; // for detailed debug output
+    // $mail->isSMTP();
+    // $mail->Host = 'mail.ekadprint.ir';
+    // $mail->SMTPAuth = true;
+    // $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    // $mail->Port = 587;
+
+    // $mail->Username = 'info@ekadprint.ir'; // YOUR gmail email
+    // $mail->Password = '12345687'; // YOUR gmail password
+
+    // // Sender and recipient settings
+    // $mail->setFrom('moein.serpico@gmail.com', 'Sender Name');
+    // $mail->addAddress('moein.serpico@gmail.com', 'Receiver Name');
+    // $mail->addReplyTo('algorithm.ac@gmail.com', 'Sender Name'); // to set the reply to
+
+    // // Setting the email content
+    // $mail->IsHTML(true);
+    // $mail->Subject = "Send email using Gmail SMTP and PHPMailer";
+    // $mail->Body = 'HTML message body. <b>Gmail</b> SMTP email body.';
+    // $mail->AltBody = 'Plain text message body for non-HTML email client. Gmail SMTP email body.';
+
+    // $mail->send();
+    // echo "Email message sent.";
+// } catch (Exception $e) {
+    // echo "Error in sending email. Mailer Error: {$mail->ErrorInfo}";
+// }
+?>
+<?php
 //session_start();
 // if(isset($_POST['firstname']) && !empty($_POST['firstname']) && isset($_POST['lastname']) && !empty($_POST['lastname']) && isset($_POST['password']) && !empty($_POST['password']) && isset($_POST['repassword']) && !empty($_POST['repassword'])){
 // $firstname=$_POST['firstname'];
@@ -51,19 +92,21 @@ if (mysqli_connect_errno()) {
   exit();
 }
 $date1 = date('Y-m-d H:i:s');
-$query="INSERT INTO request(id,size,paper_type,color_type,msg) VALUES (NULL,$size,$paper_type,$color_type,'{$msg}')";
+// $query="INSERT INTO request(id,size,paper_type,color_type,msg) VALUES (NULL,$size,$paper_type,$color_type,'{$msg}')";
+$query="INSERT INTO `request`(`id`, `size`, `paper_type`, `color_type`, `paper_form`, `seri`, `service_type`, `nm`, `tamas`,`delivery_type`, `myfile`) VALUES (NULL,
+  $size,$paper_type,$color_type,$paper_form,$seri,$service_type,'{$nm}','{$tamas}',$delivery_type,'')";
 
 
-if(isset($_FILES['myfile'])){
-      $errors= array();
-      $file_name = $_FILES['myfile']['name'];
-      $file_size = $_FILES['myfile']['size'];
-      $file_tmp = $_FILES['myfile']['tmp_name'];
-      $file_type = $_FILES['myfile']['type'];
-      $file_ext=strtolower(end(explode('.',$_FILES['myfile']['name'])));
-      echo echo basename($file_name) ."<br/>";
-      move_uploaded_file($file_tmp,"images/".$file_name);
-    }
+// if(isset($_FILES['myfile'])){
+//       $errors= array();
+//       $file_name = $_FILES['myfile']['name'];
+//       $file_size = $_FILES['myfile']['size'];
+//       $file_tmp = $_FILES['myfile']['tmp_name'];
+//       $file_type = $_FILES['myfile']['type'];
+//       $file_ext=strtolower(end(explode('.',$_FILES['myfile']['name'])));
+//       echo echo basename($file_name) ."<br/>";
+//       move_uploaded_file($file_tmp,"images/".$file_name);
+//     }
 
 
 

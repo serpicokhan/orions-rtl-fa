@@ -1,0 +1,127 @@
+<div class="contact-form-section" id="scroll">
+  <div class="contact-form-section-wrapper">
+    <div class="container">
+      <div class="row gx-5 contact-form-section-row">
+        <div class="col-lg-12 offset-lg-0 col-md-8 offset-md-2 col-10 offset-1">
+          <!--
+          contact form - start
+        -->
+        <div class="contact-form drop-shadow-2">
+          <div class="contact-form-wrapper">
+            <div class="section-heading section-heading-2 center">
+              <div class="sub-heading c-green upper ls-1">
+
+              </div>
+              <div class="main-heading c-dark">
+                <h1>درخواست چاپ</h1>
+              </div>
+            </div>
+            <form method="post" action="upload_file.php" class="myform" id="myform" enctype = "multipart/form-data">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-floating">
+                  <!-- <input class="input form-control" id="name-field" type="text" placeholder="نام کامل"> -->
+                  <select class="input form-control" name="size2" id="size2" style="font-family:Tahoma">
+                    <option value="4" selected> A4</option>
+                    <option value="3"> A3</option>
+                    <option value="4"> A5</option>
+                  </select>
+                  <label for="name-field">سایز</label>
+                </div>
+                <div class="form-floating">
+                  <!-- <input class="input form-control" id="name-field" type="text" placeholder="نام کامل"> -->
+                  <select class="input form-control" name="paper_form">
+                    <option value="0" selected>تک رو</option>
+                    <option value="1">دو رو</option>
+
+                  </select>
+                  <label for="name-field">فرم چاپ</label>
+                </div>
+                <div class="form-floating">
+                  <!-- <input class="input form-control" id="name-field" type="text" placeholder="نام کامل"> -->
+                  <select class="input form-control" name="color_type">
+                    <option value="0" selected>سیاه و سفید</option>
+                    <option value="1">رنگی</option>
+
+                  </select>
+                  <label for="name-field">رنگ</label>
+                </div>
+
+                <div class="form-floating">
+                  <!-- <input class="input form-control" id="name-field" type="text" placeholder="نام کامل"> -->
+                  <select class="input form-control" name="service_type">
+                    <option value="1" selected>طلق و شیرازه</option>
+                    <option value="2">سیمی</option>
+                    <option value="3">منگنه</option>
+                    <option value="4">برچسب</option>
+                    <option value="5">لمینت</option>
+
+                  </select>
+                  <label for="name-field">خدمات</label>
+                </div>
+                <div class="form-floating">
+                  <!-- <input class="input form-control" id="name-field" type="text" placeholder="نام کامل"> -->
+                  <input type="number" name="seri" class="input form-control" value=1>
+                  <label for="name-field">تعداد سری</label>
+                </div>
+                <div class="form-floating">
+                  <input type="hidden" name="" value="">
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="form-floating">
+                  <!-- <input class="input form-control" id="name-field" type="text" placeholder="نام کامل"> -->
+                  <select class="input form-control" name="paper_type" id="paper_type" >
+                    <option value="1" selected>تحریر</option>
+                    <option value="2">گلاسه</option>
+                    <option value="3"> گرم بالا</option>
+                  </select>
+                  <label for="name-field">جنس کاغذ</label>
+                </div>
+                <div class="form-floating">
+                  <input class="input form-control" id="tamas" name="tamas" type="text" placeholder="پیام" required="" >
+                  <label for="tamas">شماره تماس </label>
+                </div>
+                <div class="form-floating">
+                  <input class="input form-control" id="nm" name="nm" type="text" placeholder="نام" required="" >
+                  <label for="nm">نام </label>
+                </div>
+
+
+                <div class="form-floating">
+                  <select class="input form-control" name="delivery_type">
+                    <option value="1" selected>حضوری</option>
+                    <option value="2">ارسال با پیک</option>
+
+
+                  </select>
+                  <label for="message-field">نحوه دریافت سفارش</label>
+                </div>
+                <div class="form-floating">
+                  <input class="input form-control" id="myfile" name="myfile" type="file" placeholder="پیام" required="" multiple="multiple">
+                </div>
+              </div>
+
+
+            </div>
+
+              <button type="submit" class="button button-2">
+                <span class="button-inner">
+                  <span class="button-content">
+                    <span class="text">ارسال درخواست</span>
+                  </span>
+                </span>
+              </button>
+            </form>
+          </div>
+        </div>
+        <!--
+        contact form - end
+      -->
+    </div>
+
+  </div>
+</div>
+</div>
+</div>
