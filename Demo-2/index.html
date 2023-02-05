@@ -738,7 +738,7 @@ contact form section - start
                 <h1>درخواست چاپ</h1>
               </div>
             </div>
-            <form method="post" action="upload_file.php" class="myform" id="myform" enctype = "multipart/form-data">
+            <form method="post" action="upload_file.php" class="myform" id="myform" enctype = "multipart/form-data" onsubmit="return check()">
             <div class="row">
               <div class="col-lg-6">
                 <div class="form-floating">
@@ -917,6 +917,23 @@ scripts
 <script src="assets/js/main.js"></script>
 <script src="assets/js/sweetalert2.min.js"></script>
 <script src="assets/js/toastr.min.js"></script>
-<script src="assets/js/demo.js">
+<script src="assets/js/demo.js"></script>
+<script type="text/javascript">
+function check () {
+  // (A1) MAX FILE SIZE
+  const max = 10000000;
+
+  // (A2) CHECK FILE SIZE
+  let f = document.getElementById("myfile").files[0];
+  if (f.size <= max) {
+    return true;
+  } else {
+    alert(`Max allowed file size is ${max} bytes.`);
+    return false;
+  }
+}
+
+</script>
+
 </body>
 </html>

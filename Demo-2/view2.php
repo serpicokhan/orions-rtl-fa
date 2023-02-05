@@ -5,8 +5,8 @@
     <div class="blog-section-wrapper">
         <div class="container">
             <div class="row gx-5">
-              
-                                              <table class="table table-responsive-md table-hover auto-mx" style="font-size:larger">
+
+                                              <table class="table table-responsive-md table-hover " id="request_table" style="font-size:larger">
                                                   <thead>
                                                   <tr >
                                                       <th class="width80"><strong>#</strong></th>
@@ -20,8 +20,10 @@
                                                       <th><strong>تعداد سری</strong></th>
                                                       <th><strong>جنس کاغذ</strong></th>
                                                       <th><strong>نحوه سفارش</strong></th>
+                                                      <th><strong>نام فایل</strong></th>
                                                       <th><strong>دانلود</strong></th>
-                                                      <th></th>
+
+
                                                   </tr>
                                                   </thead>
                                                   <tbody>
@@ -70,33 +72,33 @@
 														$paper_form = [
 															"0" => "تک رو",
 															"1" => "دو رو",
-															
+
 														];
 														$paper_type = [
 															"1" => "تحریر",
 															"2" => "گلاسه",
 															"3" => "گرم بالا",
-															
+
 														];
 														$delivery_type = [
 															"1" => "حضوری",
 															"2" => "پیک",
-															
-															
+
+
 														];
 														$color_type = [
 															"0" => "سیاه و سفید",
 															"1" => "رنگی",
-															
+
 														];
 														$service_type = [
-															
+
 															"1" => "طلق و شیرازه",
 															"2" => "سیمی",
 															"3" => "منگنه",
 															"4" => "برچسب",
 															"5" => "لمینت",
-															
+
 														];
 
 														// Create connection
@@ -115,10 +117,10 @@
 														  while($row = $result->fetch_assoc()) {
 															  ?>
 															    <tr >
-                                                      <td><strong><?php echo (++$i);?></strong></td>
+                                                      <td><strong><?php echo $row["id"];?></strong></td>
                                                       <td><?php echo $row["nm"];?></td>
                                                        <td><?php echo $row["tamas"];?></td>
-													  
+
                                                        <td><?php echo $row["dt"]?></td>
 													    <td><?php echo $paper_size[$row["size"]];?></td>
 													    <td><?php echo $paper_form[$row["paper_form"]];?></td>
@@ -127,28 +129,35 @@
 														   <td><?php echo $row["seri"];?></td>
 														    <td><?php echo $paper_type[$row["paper_type"]];?></td>
 															 <td><?php echo $delivery_type[$row["delivery_type"]];?></td>
-															  
-                                                      
+															 <td><?php echo $row["myfile"];?></td>
+
+
+
                                                       <td>
                                                           <div class="d-flex">
-                                                <a href="#" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-download"></i></a>
-                                                <a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
+                                                            <?php
+                                                            $val=$row['myfile'];
+
+                                                               echo "<a href='images/$val' class='btn btn-primary shadow btn-xs sharp mr-1' target='_blank'><i class='fa fa-download'></i></a>";
+                                                             ?>
+
+                                                <a href="#" class="btn btn-danger shadow btn-xs sharp request_delete" data_url="<?php echo $row['id'];?>"><i class="fa fa-trash"></i></a>
                                             </div>
                                                       </td>
                                                   </tr>
-															  
+
 															  <?php
-															
+
 														  }
 														} else {
 														  echo "0 results";
 														}
 														$conn->close();
 														?>
-                                                
+
                                                 </tbody>
                                               </table>
-                                         
+
             </div>
             <div class="row">
                 <div class="col">

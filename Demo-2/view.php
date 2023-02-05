@@ -1,4 +1,13 @@
-	<!DOCTYPE html>
+<?php
+session_start();
+if(isset($_SESSION['verified']) && $_SESSION['verified']=='1'){
+
+}
+else{
+	header("Location:login.php");
+}
+ ?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <!--
@@ -38,7 +47,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
 	<style>
-	
+
 	</style>
 </head>
 <body>
@@ -223,11 +232,36 @@
     <!--
     scripts
     -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/glightbox.min.js"></script>
     <script src="assets/js/overlay-scrollbars.min.js"></script>
     <script src="assets/js/gsap.min.js"></script>
     <script src="assets/js/main.js"></script>
+		<script type="text/javascript">
+		$(".request_delete").click(function(){
+			var id=$(this).attr("data_url");
+			var tr=$(this).parent().parent().parent();
+			$.ajax({
+				    url: 'sample.php?q='+id,
+				    type: 'GET',
+						beforeSend:function(x){
+							if(!confirm("are you sure?"))
+							{
+								x.abort();
+							}
+						},
+
+				    success: function(data) {
+							tr.remove();
+				        // Do something with the response data
+				    },error:function(x,y,z){
+							console.log("error",x,y,z);
+						}
+					});
+		});
+
+		</script>
 </body>
 </html>
