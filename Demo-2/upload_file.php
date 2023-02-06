@@ -117,6 +117,7 @@ if(isset($_FILES['myfile'])){
 if(mysqli_query($con,$query)===true)
 echo ("your account added succsessfully" . "</b></p>");
 mysqli_close($con);
-header('Location:index.html');
+header('Location:https://ekadprint.ir/',true);
+echo "<script>window.top.location='https://ekadprint.ir/'</script>"
 // mysqli_query($dbn,$query);
 ?>

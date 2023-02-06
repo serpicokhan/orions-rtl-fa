@@ -60,9 +60,9 @@
 									}
 
 														$servername = "localhost";
-														$username = "root";
-														$password = "";
-														$dbname = "ekad";
+														$username = "ekadprin_root";
+														$password = "84323267Man!@#";
+														$dbname = "ekadprin_ekad";
 														$paper_size = [
 															"4" => "A4",
 															"3" => "A3",
