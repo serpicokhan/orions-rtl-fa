@@ -107,13 +107,16 @@ foreach($_FILES['myfile']['tmp_name'] as $key => $tmp_name ){
     $file_tmp =$_FILES['myfile']['tmp_name'][$key];
     $file_type=$_FILES['myfile']['type'][$key];
     $new_file_name="$date2"."_$file_name";
+    if($file_size<50000000){
+   //     move_uploaded_file($file_tmp,"images/".$new_file_name);
     $query="INSERT INTO `request`(`id`, `size`, `paper_type`, `color_type`, `paper_form`, `seri`, `service_type`, `nm`, `tamas`,`delivery_type`, `myfile`) VALUES (NULL,
       $size,$paper_type,$color_type,$paper_form,$seri,$service_type,'{$nm}','{$tamas}',$delivery_type,'{$new_file_name}')";
 
 
     if(mysqli_query($con,$query)===true)
     // echo ("your account added succsessfully" . "</b></p>");
-    move_uploaded_file($file_tmp,"images/".$file_name);
+    move_uploaded_file($file_tmp,"images/".$$new_file_name);
+  }
 }
 ////////////
 
