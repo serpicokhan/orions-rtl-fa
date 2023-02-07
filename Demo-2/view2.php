@@ -63,7 +63,7 @@
 														$username = "ekadprin_root";
 														// $username = "root";
 														$password = "84323267Man!@#";
-														$password = "";
+														// $password = "";
 														$dbname = "ekadprin_ekad";
 														$paper_size = [
 															"4" => "A4",
