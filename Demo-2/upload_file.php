@@ -115,7 +115,7 @@ foreach($_FILES['myfile']['tmp_name'] as $key => $tmp_name ){
 
     if(mysqli_query($con,$query)===true)
     // echo ("your account added succsessfully" . "</b></p>");
-    move_uploaded_file($file_tmp,"images/".$$new_file_name);
+      move_uploaded_file($file_tmp,"images/".$new_file_name);
   }
 }
 ////////////
