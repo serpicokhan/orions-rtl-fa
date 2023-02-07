@@ -4,7 +4,7 @@
 <div class="blog-section blog-section-1">
     <div class="blog-section-wrapper">
         <div class="container">
-            <div class="row gx-5">
+            <div class="row gx-5" style="overflow-x: scroll;">
 
                                               <table class="table table-responsive-md table-hover " id="request_table" style="font-size:larger">
                                                   <thead>
@@ -61,7 +61,9 @@
 
 														$servername = "localhost";
 														$username = "ekadprin_root";
+														// $username = "root";
 														$password = "84323267Man!@#";
+														$password = "";
 														$dbname = "ekadprin_ekad";
 														$paper_size = [
 															"4" => "A4",
@@ -92,7 +94,7 @@
 
 														];
 														$service_type = [
-
+                              "0" => "بدون خدمات",
 															"1" => "طلق و شیرازه",
 															"2" => "سیمی",
 															"3" => "منگنه",

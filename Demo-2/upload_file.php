@@ -99,25 +99,41 @@ $date2 = date('Y_m_d_H_i_s');
 $new_file_name="";
 if(isset($_FILES['myfile'])){
       $errors= array();
-      $file_name = $_FILES['myfile']['name'];
-      $file_size = $_FILES['myfile']['size'];
-      $file_tmp = $_FILES['myfile']['tmp_name'];
-      $file_type = $_FILES['myfile']['type'];
-      $file_ext=strtolower(end(explode('.',$_FILES['myfile']['name'])));
-      // echo basename($file_name) ."<br/>";
-      $new_file_name="$date2"."_$file_name";
-      if($file_size<50000000)
-        move_uploaded_file($file_tmp,"images/".$new_file_name);
-    }
+/////////////
 
+foreach($_FILES['myfile']['tmp_name'] as $key => $tmp_name ){
+    $file_name = $_FILES['myfile']['name'][$key];
+    $file_size =$_FILES['myfile']['size'][$key];
+    $file_tmp =$_FILES['myfile']['tmp_name'][$key];
+    $file_type=$_FILES['myfile']['type'][$key];
+    $new_file_name="$date2"."_$file_name";
     $query="INSERT INTO `request`(`id`, `size`, `paper_type`, `color_type`, `paper_form`, `seri`, `service_type`, `nm`, `tamas`,`delivery_type`, `myfile`) VALUES (NULL,
       $size,$paper_type,$color_type,$paper_form,$seri,$service_type,'{$nm}','{$tamas}',$delivery_type,'{$new_file_name}')";
 
 
-if(mysqli_query($con,$query)===true)
-echo ("your account added succsessfully" . "</b></p>");
+    if(mysqli_query($con,$query)===true)
+    // echo ("your account added succsessfully" . "</b></p>");
+    move_uploaded_file($file_tmp,"iamges/".$file_name);
+}
+////////////
+
+
+
+    //
+    //   $file_name = $_FILES['myfile']['name'];
+    //   $file_size = $_FILES['myfile']['size'];
+    //   $file_tmp = $_FILES['myfile']['tmp_name'];
+    //   $file_type = $_FILES['myfile']['type'];
+    //   $file_ext=strtolower(end(explode('.',$_FILES['myfile']['name'])));
+    //   // echo basename($file_name) ."<br/>";
+    //   $new_file_name="$date2"."_$file_name";
+    //   if($file_size<50000000)
+    //     move_uploaded_file($file_tmp,"images/".$new_file_name);
+    }
+
+
 mysqli_close($con);
-header('Location:https://ekadprint.ir/',true);
-echo "<script>window.top.location='https://ekadprint.ir/'</script>"
+header('Location:index.html',true);
+echo "<script>window.top.location='index.html'</script>"
 // mysqli_query($dbn,$query);
 ?>
